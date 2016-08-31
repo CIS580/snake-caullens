@@ -19,3 +19,18 @@ The game is implemented in JavaScript using the HTML5 canvas element using the p
 ## Extra Credit
 1. You may optionally implement obstacles within the game's area.  Should the snake collide with one, the game should end. (10)
 2. A bonus of 10 points is available for exceptionally polished game implementations.
+
+Collision info: |line| < r1+r2 CIRLCES
+Distance Formula: d = sqrt((x1-x2)^(2)-(y1-y2)^(2))
+if(line < r1+r2) then collision
+Better to square both sides instead. Avoid sqrt
+
+Collision info: !(Abot > Btop || Atop < Bbot || Aleft > Bright || Aright < Bleft)
+
+Cirlce and Rectangle -> Just do rectangle logic for basic implementation
+
+Making and maintaining the body: var arr = [{cx:0,cy:5,r:5},...];
+arr.push({_}) //Puts element at the back of the array. arr.pop //Remove
+arr.unshift({_}) //Puts element at the front of the array. arr.shift //Remove
+
+Check head verses all other elements in body array.
